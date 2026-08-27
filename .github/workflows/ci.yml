@@ -32,6 +32,15 @@ jobs:
 
       - name: Validate application
         run: python -c "from app.main import app; print('Application loaded successfully')"
-        
+
       - name: Run tests
         run: python -m pytest
+
+      - name: Create application artifact
+        run: | zip -r employee-api.zip app requirements.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: employee-api
+          path: employee-api.zip

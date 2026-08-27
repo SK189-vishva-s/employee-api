@@ -10,7 +10,7 @@ def test_home():
 
     assert response.status_code == 200
     assert response.json() == {
-        "message": "Employee API is running"
+        "message": "Employee API is running successfully"
     }
 
 

@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-    return {"message": "Employee API is running"}
+    return {"message": "Employee API is running successfully"}
 
 
 @app.get("/employees")
